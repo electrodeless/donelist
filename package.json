@@ -1,0 +1,31 @@
+{
+  "name": "time-scale",
+  "version": "1.0.0",
+  "description": "任务管理和计时应用",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "pack-win": "electron-packager . TimeScale --platform=win32 --arch=x64 --out=dist --icon=icon.ico --overwrite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "任务管理",
+    "计时器",
+    "日程安排"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.4",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.timescale.app",
+    "productName": "TimeScale",
+    "win": {
+      "target": "portable"
+    }
+  }
+}

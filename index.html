@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeScale - 任务管理与计时</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 顶部时间和临近任务显示区域 -->
+    <div class="header">
+      <div class="time-display">
+        <div class="current-time" id="current-time">00:00:00</div>
+        <div class="current-date" id="current-date">2023年1月1日</div>
+      </div>
+      <div class="upcoming-task" id="upcoming-task">临近任务：无</div>
+    </div>
+    
+    <!-- 主要内容区域 -->
+    <div class="main-content">
+      <!-- 倒计时任务区域 -->
+      <div class="countdown-tasks">
+        <div class="section-header">倒计时任务</div>
+        <div class="task-list" id="countdown-task-list">
+          <!-- 倒计时任务将在这里动态添加 -->
+        </div>
+      </div>
+      
+      <!-- 中央区域：输入框和每日任务 -->
+      <div class="central-area">
+        <!-- 输入框和按钮 -->
+        <div class="input-section">
+          <input type="text" id="task-input" placeholder="输入新任务...">
+          <div class="buttons">
+            <button id="add-task" class="btn-add">加入任务计划</button>
+            <button id="invert-selection" class="btn-invert">反选</button>
+            <button id="delete-selected" class="btn-delete">删除</button>
+            <button id="edit-selected" class="btn-edit">重编辑</button>
+          </div>
+        </div>
+        
+        <!-- 每日任务区域 -->
+        <div class="daily-tasks">
+          <div class="section-header">每日任务</div>
+          <div class="task-list" id="daily-task-list">
+            <!-- 每日任务将在这里动态添加，按年月日层级 -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- 重复任务区域 -->
+      <div class="repeat-tasks">
+        <div class="section-header">重复任务</div>
+        <div class="today-repeat-tasks">
+          <div class="subsection-header">今日重复任务</div>
+          <div class="task-list" id="today-repeat-task-list">
+            <!-- 今日重复任务将在这里动态添加 -->
+          </div>
+        </div>
+        <div class="all-repeat-tasks">
+          <div class="repeat-weekly">
+            <div class="subsection-header">每周任务</div>
+            <div class="task-list" id="weekly-task-list">
+              <!-- 每周任务将在这里动态添加 -->
+            </div>
+          </div>
+          <div class="repeat-monthly">
+            <div class="subsection-header">每月任务</div>
+            <div class="task-list" id="monthly-task-list">
+              <!-- 每月任务将在这里动态添加 -->
+            </div>
+          </div>
+          <div class="repeat-yearly">
+            <div class="subsection-header">每年任务</div>
+            <div class="task-list" id="yearly-task-list">
+              <!-- 每年任务将在这里动态添加 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入JavaScript文件 -->
+  <script src="renderer.js"></script>
+</body>
+</html> 
